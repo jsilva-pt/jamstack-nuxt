@@ -13,9 +13,9 @@
 export default {
   asyncData({ params, app }) {
     return {
-      block1: require(`../static/blocks/${app.i18n.locale}/${process.env.NUXT_ENV_COUNTRY}/contacts/block1.md`)
+      block1: require(`../data/cms-blocks/${app.i18n.locale}/${process.env.NUXT_ENV_COUNTRY}/contacts/block1.md`)
         .default,
-      block2: require(`../static/blocks/${app.i18n.locale}/${process.env.NUXT_ENV_COUNTRY}/contacts/block2.md`)
+      block2: require(`../data/cms-blocks/${app.i18n.locale}/${process.env.NUXT_ENV_COUNTRY}/contacts/block2.md`)
         .default
     }
   }

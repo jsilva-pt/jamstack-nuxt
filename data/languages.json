@@ -15,7 +15,7 @@
     "code": "ar",
     "name": "عربي",
     "iso": "ar-EG",
-    "rtl": true,
-    "file": "ar.js"
+    "file": "ar.js",
+    "rtl": true
   }
 ]

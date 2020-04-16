@@ -8,7 +8,7 @@
 export default {
   asyncData({ params, app }) {
     return {
-      block: require(`../static/blocks/${app.i18n.locale}/${process.env.NUXT_ENV_COUNTRY}/terms-and-conditions.md`)
+      block: require(`../data/cms-blocks/${app.i18n.locale}/${process.env.NUXT_ENV_COUNTRY}/terms-and-conditions.md`)
         .default
     }
   }

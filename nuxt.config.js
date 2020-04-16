@@ -1,8 +1,8 @@
 import colors from 'vuetify/es5/util/colors'
 require('dotenv').config()
 
-const languages = require(`./database/languages.json`)
-const countries = require(`./database/countries.json`)
+const languages = require(`./data/languages.json`)
+const countries = require(`./data/countries.json`)
 const currentCountry = countries[process.env.NUXT_ENV_COUNTRY]
 const countryLanguagesCodes = currentCountry.languages
 const countryDefaultLanguage = currentCountry.default
