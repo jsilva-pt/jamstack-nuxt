@@ -1,0 +1,9 @@
+[{
+    "code": "en",
+    "name": "English"
+},
+{
+    "code": "ar",
+    "name": "Arabe",
+    "rtl": true
+}]

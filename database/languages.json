@@ -1,0 +1,21 @@
+[
+  {
+    "code": "en",
+    "name": "English",
+    "iso": "en-NG",
+    "file": "en.js"
+  },
+  {
+    "code": "fr",
+    "name": "Français",
+    "iso": "fr-FR",
+    "file": "fr.js"
+  },
+  {
+    "code": "ar",
+    "name": "عربي",
+    "iso": "ar-EG",
+    "rtl": true,
+    "file": "ar.js"
+  }
+]

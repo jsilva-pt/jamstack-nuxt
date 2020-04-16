@@ -1,0 +1,30 @@
+{
+  "ng": {
+    "languages": [ "en" ],
+    "default": "en"
+  },
+  "ke": {
+    "languages": [ "en" ],
+    "default": "en"
+  },
+  "gh": {
+    "languages": [ "en" ],
+    "default": "en"
+  },
+  "eg": {
+    "languages": [ "en", "ar" ],
+    "default": "ar"
+  },
+  "ci": {
+    "languages": [ "fr" ],
+    "default": "fr"
+  },
+  "ma": {
+    "languages": [ "fr", "ar" ],
+    "default": "fr"
+  },
+  "tn": {
+    "languages": [ "fr" ],
+    "default": "fr"
+  }
+}
