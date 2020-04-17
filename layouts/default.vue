@@ -1,18 +1,45 @@
 <template>
   <v-app>
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+      temporary
+      class="hidden-md-and-up"
+    >
+      <v-list>
+        <template v-for="(item, i) in menu">
+          <v-subheader v-if="!item.to" :key="i">{{ item.title }}</v-subheader>
+          <v-list-item v-else :key="i" :to="item.to" router exact>
+            <v-list-item-content>
+              <v-list-item-title v-text="item.name" />
+            </v-list-item-content>
+          </v-list-item>
+        </template>
+      </v-list>
+    </v-navigation-drawer>
     <v-app-bar fixed app>
+      <v-app-bar-nav-icon
+        class="hidden-md-and-up"
+        @click.stop="drawer = !drawer"
+      />
       <v-toolbar-title
         @click="$router.push({ name: `index___${$i18n.locale}` })"
         v-text="title"
       />
       <v-spacer />
-      <v-btn v-for="(item, index) in menu" :key="index" text :to="item.to">
+      <v-btn
+        v-for="(item, index) in menu"
+        :key="index"
+        text
+        :to="item.to"
+        class="hidden-sm-and-down"
+      >
         {{ item.name }}
       </v-btn>
       <v-menu transition="slide-y-transition" bottom>
         <template v-slot:activator="{ on }">
           <v-btn text v-on="on">
-            {{ $i18n.locale }}
+            {{ currentLocaleData.name }}
           </v-btn>
         </template>
         <v-list>
@@ -43,9 +70,10 @@ export default {
   middleware: 'languages',
   data() {
     return {
+      drawer: false,
       fixed: false,
       title: 'JAMstack experience',
-      currentLanguage: null
+      currentLocaleData: null
     }
   },
   computed: {
@@ -73,10 +101,10 @@ export default {
     }
   },
   created() {
-    const currentLocaleData = this.$i18n.locales.find(
+    this.currentLocaleData = this.$i18n.locales.find(
       (el) => el.code === this.$i18n.locale
     )
-    this.setCurrentLanguageSettings(currentLocaleData)
+    this.setCurrentLanguageSettings(this.currentLocaleData)
   },
   methods: {
     setCurrentLanguageSettings(locale) {

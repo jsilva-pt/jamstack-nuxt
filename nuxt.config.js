@@ -1,4 +1,3 @@
-import colors from 'vuetify/es5/util/colors'
 require('dotenv').config()
 
 const languages = require(`./data/languages.json`)
@@ -62,7 +61,7 @@ export default {
       'nuxt-i18n',
       {
         seo: false,
-        baseUrl: 'https://my-nuxt-app.com',
+        baseUrl: process.env.BASE_URL,
         parsePages: false,
         // pages: {
         //   pricing: {
@@ -80,8 +79,21 @@ export default {
           messages: {}
         }
       }
-    ]
+    ],
+    //     If you use other modules (eg. nuxt-i18n), always declare the sitemap module at end of array
+    // eg. modules: ['nuxt-i18n', '@nuxtjs/sitemap']
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
   ],
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '/'
+  },
+
+  sitemap: {
+    hostname: process.env.BASE_URL
+  },
 
   // [optional] markdownit options
   // See https://github.com/markdown-it/markdown-it
@@ -103,20 +115,7 @@ export default {
    */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: false,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
+    theme: {}
   },
   /*
    ** Build configuration

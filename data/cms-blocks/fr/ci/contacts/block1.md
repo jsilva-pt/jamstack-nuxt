@@ -1,3 +1,0 @@
-# Markdown Block
-
-We can have markdown blocks mixed with ...

@@ -5,11 +5,15 @@
 </template>
 
 <script>
+import loadMarkdown from '~/utils/load-markdown'
 export default {
-  asyncData({ params, app }) {
+  async asyncData({ params, app }) {
     return {
-      block: require(`../data/cms-blocks/${app.i18n.locale}/${process.env.NUXT_ENV_COUNTRY}/terms-and-conditions.md`)
-        .default
+      block: await loadMarkdown({
+        locale: app.i18n.locale,
+        country: process.env.NUXT_ENV_COUNTRY,
+        filename: 'terms-and-conditions'
+      })
     }
   }
 }
