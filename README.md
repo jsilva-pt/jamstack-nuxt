@@ -84,7 +84,7 @@ Add the following structure to the `data/countries.json` file:
 }
 ```
 
-## Override a CMS block for a specific country (eg. Brasil)
+## Override a markdown file for a specific country (eg. Brasil) in the Portuguese language
 
 #### 1. Create the directory `data/cms-blocks/pt/br` (the country code for Brasil)
 #### 2. Create the markdown(s) file(s) to override
