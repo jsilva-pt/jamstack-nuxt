@@ -4,11 +4,13 @@
 
 ## Requirements
 - [X] Generate a website to be deployed in several domains (e.g. `com.ng, com.gh, com.eg, com.tn, ke, ci, ma`)
-- [X] Each domain can have different languages available;
-- [X] Support RTL;
-- [X] Possibility to define the default language for each domain;
-- [X] Possibility to use markdown files as cms blocks;
+- [X] Each domain can have different languages available [nuxt-i18n](https://github.com/nuxt-community/nuxt-i18n)
+- [X] Support RTL
+- [X] Possibility to define the default language for each domain
+- [X] Possibility to use markdown files as cms blocks [@nuxtjs/markdownit](https://github.com/nuxt-community/modules/tree/master/packages/markdownit)
 - [X] All domains have the same pages however CMS blocks can be customized by country and language
+- [x] Generate the sitemap.xml [@nuxtjs/sitemap](https://github.com/nuxt-community/sitemap-module)
+- [x] Generate the robots.txt [@nuxtjs/robots](https://github.com/nuxt-community/robots-module)
 
 ## Configurations
 ```bash
