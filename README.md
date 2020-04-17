@@ -1,5 +1,5 @@
-# jam
-
+# jamstack-nuxt
+   
 > My [Jamstack](https://jamstack.org/) experiment with [Nuxt.js](https://nuxtjs.org).
 
 ## Requirements
@@ -31,9 +31,9 @@ $ yarn generate
 ```
 
 ## Add a new language (e.g. Portuguese)
-1. Inside the file `data/languages.json` add a new object with the following structure:
+#### 1. Inside the file `data/languages.json` add a new object with the following structure:
 
-```json
+```js
 {
     "code": "pt", // language code
     "name": "Português", // language display name
@@ -43,10 +43,11 @@ $ yarn generate
 }
 ```
 
-2. Create the translations file `lang/pt.js`
-
-3. Create the global CMS blocks to the Portuguese language
-3.1. Create the folder `data/cms-blocks/pt` (the language code for Portugal).
+#### 2. Create the translations file `lang/pt.js`
+  
+#### 3. Create the global CMS blocks to the Portuguese language
+  
+##### 3.1 Create the folder `data/cms-blocks/pt` (the language code for Portugal).
 
 ```bash
 .
@@ -58,7 +59,7 @@ $ yarn generate
       └─ pt # new language being added
 ```
 
-3.2. Create every CMS block existent to the other languages
+##### 3.2 Create every CMS block existent to the other languages
 
 ```bash
 cms-blocks
@@ -73,7 +74,7 @@ Congratulation, we are ready to associate the Portuguese language to the desired
 ## Add a new country (e.g. Portugal)
 Add the following structure to the `data/countries.json` file:
 
-```json
+```js
 {
     // other languages are nested here
     "pt": {
@@ -83,10 +84,10 @@ Add the following structure to the `data/countries.json` file:
 }
 ```
 
-### Override a CMS block for a specific country (eg. Brasil)
+## Override a CMS block for a specific country (eg. Brasil)
 
-1. Create the directory `data/cms-blocks/pt/br` (the country code for Brasil)
-2. Create the markdown(s) file(s) to override
+#### 1. Create the directory `data/cms-blocks/pt/br` (the country code for Brasil)
+#### 2. Create the markdown(s) file(s) to override
 
 ```bash
 cms-blocks
