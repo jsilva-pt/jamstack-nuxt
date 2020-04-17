@@ -30,7 +30,7 @@ $ yarn dev
 $ yarn generate
 ```
 
-## Add a new language (e.g. Portuguese)
+## Add a new language :speech_balloon: (e.g. Portuguese)
 #### 1. Inside the file `data/languages.json` add a new object with the following structure:
 
 ```js
@@ -69,9 +69,9 @@ cms-blocks
     └─ terms-and-conditions.md
 ```
 
-Congratulation, we are ready to associate the Portuguese language to the desired countries.
+:tada: Congratulation, we are ready to associate the Portuguese language to the desired countries.
 
-## Add a new country (e.g. Portugal)
+## Add a new country :earth_africa: (e.g. Portugal)
 Add the following structure to the `data/countries.json` file:
 
 ```js
