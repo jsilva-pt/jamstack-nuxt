@@ -47,7 +47,7 @@ $ yarn generate
   
 #### 3. Create the global CMS blocks to the Portuguese language
   
-##### 3.1 Create the folder `data/cms-blocks/pt` (the language code for Portugal).
+- Create the folder `data/cms-blocks/pt` (the language code for Portugal).
 
 ```bash
 .
@@ -59,7 +59,7 @@ $ yarn generate
       └─ pt # new language being added
 ```
 
-##### 3.2 Create every CMS block existent to the other languages
+- Create every CMS block existent to the other languages
 
 ```bash
 cms-blocks
